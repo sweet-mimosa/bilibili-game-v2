@@ -3,9 +3,9 @@ import {BannersWrapper} from './style'
 import Swiper from 'swiper'
 import { Link } from 'react-router-dom'
 import propTypes from 'prop-types'
-import banner1 from '../../../assets/images/aobidao.jpg'
-import banner2 from '../../../assets/images/diwurenge.jpg'
-import banner3 from '../../../assets/images/mnxshx.jpg'
+import banner1 from '../../assets/images/aobidao.jpg'
+import banner2 from '../../assets/images/diwurenge.jpg'
+import banner3 from '../../assets/images/mnxshx.jpg'
 
 export default function Banners() {
     useEffect(() => {

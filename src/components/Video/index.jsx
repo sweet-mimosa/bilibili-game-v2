@@ -1,8 +1,8 @@
 import React from 'react'
 import { VideoWrapper } from './style'
-import pic from '../../../../assets/images/pic.webp'
-import userimg from '../../../../assets/images/usericon.webp'
-export default function Video({video=[]}) {
+import pic from '@/assets/images/pic.webp'
+import userimg from '@/assets/images/usericon.webp'
+export default function Video({video}) {
 
     const rendervideo = () => {
         return (

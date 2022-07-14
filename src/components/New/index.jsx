@@ -1,12 +1,14 @@
 import React from 'react'
 import './style.css'
-import newimg from '../../../assets/images/newimg.webp'
-import newicon from '../../../assets/images/newicon.webp'
+import newimg from '@/assets/images/newimg.webp'
+import newicon from '@/assets/images/newicon.webp'
+import Scroll from '../common/Scroll'
+import { forceCheck } from 'react-lazyload'
 
-export default function New({source=[]}) {
+export default function New({gameList}) {
     const rendernew = () => {
         return(
-            source.map((item) => (
+            gameList.map((item) => (
                 <div className="bui-mod-wrap home-content"  key={item.id}>
                     <div className="bui-mod-content">
                         <div className="bui-list-topic-index">
@@ -41,6 +43,7 @@ export default function New({source=[]}) {
         )
     }
     return (
+        <Scroll onScroll={forceCheck}>
         <section className='bui-container'>
             <div className="bui-tab home-tab-content">
                 <div className="tab-content">
@@ -50,5 +53,6 @@ export default function New({source=[]}) {
                 </div>    
             </div>
         </section>
+        </Scroll>
     )
 }

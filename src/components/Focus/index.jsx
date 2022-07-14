@@ -1,27 +1,22 @@
 import React,{ useState,useEffect } from 'react'
 import {FocusWrapper} from './style'
 import classnames from 'classnames'
-import Info from './Info'
-import Video from './Video'
-import { getVideoList } from '../../../api/request'
-import icon from '../../../assets/images/icon.webp'
-import icon1 from '../../../assets/images/icon1.webp'
-import icon2 from '../../../assets/images/icon2.webp'
-import icon3 from '../../../assets/images/icon3.webp'
+import Info from '@/components/Info'
+import Video from '@/components/Video'
+import icon from '@/assets/images/icon.webp'
+import icon1 from '@/assets/images/icon1.webp'
+import icon2 from '@/assets/images/icon2.webp'
+import icon3 from '@/assets/images/icon3.webp'
+import Scroll from '../common/Scroll'
+import { forceCheck } from 'react-lazyload'
 
-export default function Focus() {
+export default function Focus({videoList}) {
     const [tab,setTab] = useState('1');
-    const [videoData,setVideoData] = useState([]);
     const changeTab = (target) => {
         setTab(target);
     }
-    useEffect(() => {
-        (async () => {
-            let { data } = await getVideoList();
-            setVideoData(data);
-        })();
-    },[]);
     return (
+        
         <FocusWrapper>
             <div className="edit-play-game swiper-container">
                 <div className="swiper-wrapper">
@@ -44,7 +39,7 @@ export default function Focus() {
                 </a>
             </div>
             <Info tab={tab}/>
-            <Video video={videoData}/>
+            <Video video={videoList}/>
         </FocusWrapper>
     )
 }

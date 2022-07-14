@@ -1,10 +1,7 @@
+import { combineReducers } from "redux";
+import { reducer as chooseReducer } from '@/pages/Choose/store/index'
 
-const defaultState = {
-    
-}
 
-const reducer = (state = defaultState,action) => {
-    return state;
-}
-
-export default reducer;
+export default combineReducers({
+    choose: chooseReducer
+});

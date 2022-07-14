@@ -10,7 +10,7 @@
         position: relative;
         max-width: 10.8rem;
         margin: 0 auto;
-        overflow: auto;
+        /* border-top: 1.44rem solid transparent; */
     }
     .bui-tab{
         position: relative;

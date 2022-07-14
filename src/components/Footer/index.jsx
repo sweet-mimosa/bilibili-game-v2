@@ -2,9 +2,10 @@ import React from 'react'
 import { Link,useLocation } from 'react-router-dom'
 import {FooterWrapper} from './style'
 import classnames from 'classnames'
-
+import { isPathPartlyExisted } from '../../utils'
 export default function Footer() {
     const { pathname } = useLocation();
+    if(isPathPartlyExisted(pathname)) return;
     return (
         <FooterWrapper>
             <Link to='/' className={classnames({active:pathname == '/'})}>

@@ -1,10 +1,11 @@
 import axios from 'axios'
+import { axiosInstance } from './config';
 
-export const getGameList = () =>
-    axios.get(`https://www.fastmock.site/mock/477f993fb8b86e1e7fa9aa8ca719a766/bilibili-game/gamelist`)
+export const getGameListRequest  = () =>
+    axiosInstance.get(`/gamelist`)
 
-export const getVideoList = () =>
-    axios.get('https://www.fastmock.site/mock/477f993fb8b86e1e7fa9aa8ca719a766/bilibili-game/videoinfo')
+export const getVideoListRequest  = () =>
+    axiosInstance.get('/videoinfo')
 
-export const getReserveList = () =>
-    axios.get('https://www.fastmock.site/mock/477f993fb8b86e1e7fa9aa8ca719a766/bilibili-game/reservelist')
+export const getReserveListRequest  = () =>
+    axiosInstance.get('/reservelist')

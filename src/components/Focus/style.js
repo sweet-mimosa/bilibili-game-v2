@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const FocusWrapper = styled.div`
-    display: block;
     .edit-play-game .swiper-container {
         padding: 0 0.36rem;
         margin: 0.42rem 0;

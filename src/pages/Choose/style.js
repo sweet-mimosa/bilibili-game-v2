@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const ChooseWrapper = styled.div`
+    position: sticky;
     overflow-y: scroll;
     z-index: 5000;
     ul{
